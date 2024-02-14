@@ -7,9 +7,9 @@ namespace Cinema
 {
     public partial class _Default : Page
     {
-        int CountSalaNord = 0;
-        int CountSalaSud = 0;
-        int CountSalaEst = 0;
+        int countSalaNord = 0;
+        int countSalaSud = 0;
+        int countSalaEst = 0;
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -26,35 +26,45 @@ namespace Cinema
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string sala = reader["sala"].ToString();
+                    string tipoSala = reader["Sala"].ToString();
                     int count = Convert.ToInt32(reader["nPrenotazioni"]);
+                    int countRidotto = Convert.ToInt32(reader["Ridotto"]);
 
-                    switch (sala)
+                    switch (tipoSala)
                     {
-
-
-                        case "SALA NORD":
-                            CountSalaNord += count;
+                        case "SALA NORD ":
+                            countSalaNord += count;
+                            if (countRidotto == 1)
+                            {
+                                bigliettiRidottiNord.InnerText = count.ToString();
+                            }
+                            SalaNord.InnerText = tipoSala.ToString();
+                            bigliettiNord.InnerText = countSalaNord.ToString();
                             break;
-                        case "SALA SUD":
-                            CountSalaSud += count;
-
+                        case "SALA EST  ":
+                            countSalaEst += count;
+                            if (countRidotto == 1)
+                            {
+                                bigliettiRidottiEst.InnerText = count.ToString();
+                            }
+                            SalaEst.InnerText = tipoSala.ToString();
+                            bigliettiEst.InnerText = countSalaEst.ToString();
                             break;
-                        case "SALA EST":
-                            CountSalaEst += count;
-
-
+                        case "SALA SUD  ":
+                            countSalaSud += count;
+                            if (countRidotto == 1)
+                            {
+                                bigliettiRidottiSud.InnerText = count.ToString();
+                            }
+                            SalaSud.InnerText = tipoSala.ToString();
+                            bigliettiSud.InnerText = countSalaSud.ToString();
                             break;
+                        default: break;
                     }
-                    bigliettiNord.InnerHtml = CountSalaNord.ToString();
-                    bigliettiRidottiNord.InnerHtml = count.ToString();
-
-                    bigliettiSud.InnerHtml = CountSalaSud.ToString();
-                    bigliettiRidottiSud.InnerHtml = count.ToString();
 
 
-                    bigliettiEst.InnerHtml = CountSalaEst.ToString();
-                    bigliettiRidottiEst.InnerHtml = count.ToString();
+
+
 
 
                 }

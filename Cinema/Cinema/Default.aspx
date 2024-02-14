@@ -34,13 +34,13 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="text-center" id="Salanord" runat="server">NORD</td>
+                    <td class="text-center" id="SalaNord" runat="server">NORD</td>
                     <td class="text-center" id="bigliettiNord" runat="server"> </td>
                     <td class="text-center" id="bigliettiRidottiNord" runat="server"> </td>
 
                 </tr>
                 <tr>
-                    <td class="text-center" id="Salasud" runat="server">SUD</td>
+                    <td class="text-center" id="SalaSud" runat="server">SUD</td>
                     <td class="text-center" id="bigliettiSud" runat="server"></td>
                     <td class="text-center" id="bigliettiRidottiSud" runat="server"></td>
                 </tr>

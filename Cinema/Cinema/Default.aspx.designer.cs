@@ -87,13 +87,13 @@ namespace Cinema
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Controllo Salanord.
+        /// Controllo SalaNord.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell Salanord;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell SalaNord;
 
         /// <summary>
         /// Controllo bigliettiNord.
@@ -114,13 +114,13 @@ namespace Cinema
         protected global::System.Web.UI.HtmlControls.HtmlTableCell bigliettiRidottiNord;
 
         /// <summary>
-        /// Controllo Salasud.
+        /// Controllo SalaSud.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell Salasud;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell SalaSud;
 
         /// <summary>
         /// Controllo bigliettiSud.
